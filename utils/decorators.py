@@ -38,10 +38,10 @@ def profiled(func):
     called = 0
 
     @wraps(func)
-    def wrapper(*args, **kwargs):
+    def decorator(*args, **kwargs):
         nonlocal called
         called += 1
         return func(*args, **kwargs)
 
-    wrapper.called = lambda: called
-    return wrapper
+    decorator.called = lambda: called
+    return decorator

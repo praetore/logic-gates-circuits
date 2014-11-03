@@ -1,6 +1,7 @@
 from abc import ABCMeta
-from LogicGate import LogicGate
-from utils import accept_binary_only
+from abstract.LogicGate import LogicGate
+from utils.decorators import accept_binary_only
+
 
 __author__ = 'Darryl'
 __date__ = '3-11-2014'
@@ -10,7 +11,7 @@ class BinaryGate(LogicGate):
     __metaclass__ = ABCMeta
 
     def __init__(self, n):
-        LogicGate.__init__(self, n)
+        super().__init__(n)
         self.pinA = None
         self.pinB = None
 

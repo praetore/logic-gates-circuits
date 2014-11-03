@@ -1,5 +1,5 @@
-from BinaryGate import BinaryGate
-from utils import convert_boolean_to_binary
+from abstract.BinaryGate import BinaryGate
+from utils.decorators import convert_boolean_to_binary
 
 __author__ = 'Darryl'
 __date__ = '3-11-2014'
@@ -7,7 +7,7 @@ __date__ = '3-11-2014'
 
 class AndGate(BinaryGate):
     def __init__(self, n):
-        BinaryGate.__init__(self, n)
+        super().__init__(n)
 
     @convert_boolean_to_binary
     def performGateLogic(self):
