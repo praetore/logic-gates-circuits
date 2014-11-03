@@ -6,9 +6,6 @@ __date__ = '3-11-2014'
 
 
 class XnorGate(BinaryGate):
-    def __init__(self, n):
-        super().__init__(n)
-
     @convert_boolean_to_binary
     def performGateLogic(self):
         self.getPin()
