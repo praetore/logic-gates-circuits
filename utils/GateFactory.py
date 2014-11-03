@@ -1,5 +1,6 @@
 from concrete.AndGate import AndGate
 from concrete.NandGate import NandGate
+from concrete.NorGate import NorGate
 from concrete.NotGate import NotGate
 from concrete.OrGate import OrGate
 from concrete.XnorGate import XnorGate
@@ -29,3 +30,5 @@ class GateFactory:
             return XnorGate(name)
         elif gatetype == "nand":
             return NandGate(name)
+        elif gatetype == "nor":
+            return NorGate(name)
