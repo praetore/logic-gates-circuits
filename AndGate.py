@@ -13,7 +13,3 @@ class AndGate(BinaryGate):
     def performGateLogic(self):
         self.getPin()
         return self.pinA == 1 and self.pinB == 1
-
-if __name__ == '__main__':
-    g1 = AndGate("G1")
-    print(g1.getOutput())

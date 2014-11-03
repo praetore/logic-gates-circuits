@@ -32,3 +32,16 @@ def accept_binary_only(func):
         return result
 
     return decorator
+
+
+def profiled(func):
+    called = 0
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        nonlocal called
+        called += 1
+        return func(*args, **kwargs)
+
+    wrapper.called = lambda: called
+    return wrapper

@@ -13,7 +13,3 @@ class OrGate(BinaryGate):
     def performGateLogic(self):
         self.getPin()
         return self.pinA != self.pinB or self.pinA == 0 and self.pinB == 0
-
-if __name__ == '__main__':
-    g1 = OrGate("g1")
-    print(g1.performGateLogic())
